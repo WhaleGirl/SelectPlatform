@@ -38,7 +38,7 @@ int mysql_insert(MYSQL* myfd,std::string &name,std::string& sex,\
 //
 void mysql_select(MYSQL* myfd)
 {
-	std::string sql = "select * from students";
+	std::string sql = "select name from CrimePeople";
 	mysql_query(myfd,sql.c_str());
 	MYSQL_RES* result = mysql_store_result(myfd);
 	int lines = mysql_num_rows(result);

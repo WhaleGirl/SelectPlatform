@@ -31,11 +31,23 @@ int main()
 //	strtok(NULL,"=&");
 //	std::string hobby = strtok(NULL,"=&");
 
-    std::string name = "zhangsan";
-	std::string sex= "man";
-	std::string age= "29";
-	std::string descText= "kjdfhjksfjs";
-	std::string picPath= "../wwwroot/imag/sunset.jpg";
+    //std::string name = "zhangsan";
+	//std::string sex= "man";
+	//std::string age= "29";
+	//std::string descText= "kjdfhjksfjs";
+	//std::string picPath= "../wwwroot/imag/sunset.jpg";
+	strtok(buf,"=&");
+	std::string name = strtok(NULL,"=&");
+	strtok(NULL,"=&");
+	std::string sex = strtok(NULL,"=&");
+	strtok(NULL,"=&");
+	std::string age = strtok(NULL,"=&");
+	strtok(NULL,"=&");
+	std::string descText = strtok(NULL,"=&");
+	strtok(NULL,"=&");
+	std::string picPath = strtok(NULL,"=&");
+
+
 	MYSQL* myfd = mysql_connect();
 	mysql_insert(myfd,name,sex,age,descText,picPath);
 	myclose(myfd);
