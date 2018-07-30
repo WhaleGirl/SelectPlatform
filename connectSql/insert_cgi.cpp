@@ -39,6 +39,8 @@ int main()
 	strtok(buf,"=&");
 	std::string name = strtok(NULL,"=&");
 	strtok(NULL,"=&");
+	std::string IDnum = strtok(NULL,"=&");
+	strtok(NULL,"=&");
 	std::string sex = strtok(NULL,"=&");
 	strtok(NULL,"=&");
 	std::string age = strtok(NULL,"=&");
@@ -49,7 +51,7 @@ int main()
 
 
 	MYSQL* myfd = mysql_connect();
-	mysql_insert(myfd,name,sex,age,descText,picPath);
+	mysql_insert(myfd,name,IDnum,sex,age,descText,picPath);
 	myclose(myfd);
 
 	 return 0;

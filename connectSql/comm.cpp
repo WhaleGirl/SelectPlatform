@@ -16,11 +16,13 @@ MYSQL*	 mysql_connect()
 	}
 	return myfd;
 }
-int mysql_insert(MYSQL* myfd,std::string &name,std::string& sex,\
+int mysql_insert(MYSQL* myfd,std::string &name,std::string& IDnum,std::string& sex,\
 			std::string& age,std::string &descText,std::string &picPath)
 {
-	std::string sql = "insert into CrimePeople (name,sex,age,descText,picPath) values (\"";
+	std::string sql = "insert into CrimePeople (name,IDnum,sex,age,descText,picPath) values (\"";
 	sql += name;
+	sql += "\",\"";
+	sql += IDnum;
 	sql += "\",\"";
 	sql += sex;
 	sql += "\",\"";
@@ -38,7 +40,7 @@ int mysql_insert(MYSQL* myfd,std::string &name,std::string& sex,\
 //
 void mysql_select(MYSQL* myfd)
 {
-	std::string sql = "select name from CrimePeople";
+	std::string sql = "select IDnum from CrimePeople";
 	mysql_query(myfd,sql.c_str());
 	MYSQL_RES* result = mysql_store_result(myfd);
 	int lines = mysql_num_rows(result);
