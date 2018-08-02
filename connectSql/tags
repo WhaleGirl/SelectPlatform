@@ -12,5 +12,5 @@ main	select_cgi.cpp	/^int main()$/;"	f
 myclose	comm.cpp	/^void myclose(MYSQL* myfd)$/;"	f
 mysql_connect	comm.cpp	/^MYSQL*	 mysql_connect()$/;"	f
 mysql_insert	comm.cpp	/^int mysql_insert(MYSQL* myfd,std::string &name,std::string& IDnum,std::string& sex,\\$/;"	f
-mysql_select	comm.cpp	/^void mysql_select(MYSQL* myfd)$/;"	f
+mysql_select	comm.cpp	/^void mysql_select(MYSQL* myfd,char* str)$/;"	f
 test	comm.cpp	/^void test()$/;"	f

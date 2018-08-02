@@ -38,9 +38,11 @@ int mysql_insert(MYSQL* myfd,std::string &name,std::string& IDnum,std::string& s
 }
 //对数据进行提取
 //
-void mysql_select(MYSQL* myfd)
+void mysql_select(MYSQL* myfd,char* str)
 {
-	std::string sql = "select IDnum from CrimePeople";
+	std::cout<<str<<std::endl;
+	std::string sql = "select * from CrimePeople where IDnum=";
+	sql+=(str+6);
 	mysql_query(myfd,sql.c_str());
 	MYSQL_RES* result = mysql_store_result(myfd);
 	int lines = mysql_num_rows(result);

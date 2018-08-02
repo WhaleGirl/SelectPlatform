@@ -8,4 +8,4 @@ MYSQL* mysql_connect();
 int mysql_insert(MYSQL* myfd,std::string &name,std::string& Idnum,std::string& sex,\
 			std::string& age,std::string &descText,std::string &picPath);
 void myclose(MYSQL* mysql);
-void mysql_select(MYSQL* myfd);
+void mysql_select(MYSQL* myfd,char* str);

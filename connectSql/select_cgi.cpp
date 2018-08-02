@@ -25,8 +25,9 @@ int main()
     //std::string name = "lisi";
 	//std::string school = "xjd";
 	//std::string hobby = "sleep";
+	std::cout<< buf<<std::endl;	
 	MYSQL* myfd = mysql_connect();
-	mysql_select(myfd);//全部取出
+	mysql_select(myfd,buf);//全部取出
 	myclose(myfd);
 
 	 return 0;
